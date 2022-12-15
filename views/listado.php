@@ -18,12 +18,17 @@
 <table>
     <tr>
         <th>Título</th>
+        <th>Acciones</th>
     </tr>
 <?php
-  foreach($tareas as $tarea):
+  foreach($tareas as $num => $tarea):
 ?>
     <tr>
-        <td><?php echo $tarea->titulo ?></td>
+        <td><?php echo $tarea ?></td>
+        <td>
+          <a href="/index.php/deletetarea/<?=$num?>">Eliminiar</a>
+          <a href="/index.php/finalizartarea/<?=$num?>">Finalizar</a>
+        </td>
     </tr>
 <?php
   endforeach;

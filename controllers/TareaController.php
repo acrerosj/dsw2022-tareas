@@ -28,6 +28,18 @@ class TareaController {
     $nuevaTarea = new Tarea($titulo);
     $_SESSION['tareas'][] = $nuevaTarea;
     $this->tareas = $_SESSION['tareas'];
-    $this->listado();
+    header('Location: /');
+  }
+
+  public function eliminarTarea($index) {
+    array_splice($this->tareas, $index, 1);
+    $_SESSION['tareas'] = $this->tareas;
+    header('Location: /');
+  }
+
+  public function finalizarTarea($index) {
+    $this->tareas[$index]->fin = true;
+    $_SESSION['tareas'] = $this->tareas;
+    header('Location: /');
   }
 }

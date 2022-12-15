@@ -13,6 +13,10 @@ if (isset( $_SERVER['PATH_INFO'])) {
     } else {
       $controller->crearTarea($_POST['titulo']);
     }
+  } elseif ($partes[1]=='deletetarea' && is_numeric($partes[2])) {
+    $controller->eliminarTarea($partes[2]);
+  } elseif ($partes[1]=='finalizartarea' && is_numeric($partes[2])) {
+    $controller->finalizarTarea($partes[2]);    
   } else {
     $controller->listado();
   }
