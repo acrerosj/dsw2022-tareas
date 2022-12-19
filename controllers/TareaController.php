@@ -37,4 +37,11 @@ class TareaController {
     $_SESSION['tareas'] = $this->tareas;
     header('Location: /');
   }
+
+  public function crearTrabajo($titulo , $fecha) {
+    $nuevaTrabajo = new Trabajo($titulo, $fecha);
+    $_SESSION['tareas'][] = $nuevaTrabajo;
+    $this->tareas = $_SESSION['tareas'];
+    header('Location: /');
+  }
 }

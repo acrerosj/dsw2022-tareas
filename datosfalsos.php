@@ -6,7 +6,7 @@
     $tareas = [
       new Tarea('Corregir examen PHP'),
       new Tarea('Corregir examen Javascript'),
-      new Trabajo('Hacer Web'),
+      new Trabajo('Hacer Web', '21/12/2022'),
       new Tarea('Poner notas DSW'),
       new Tarea('Poner notas DEW')
     ];

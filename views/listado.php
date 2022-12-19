@@ -8,10 +8,13 @@
 </p>
 <?php
   foreach($tareas as $num => $tarea):
-    require('views/tarea.php');
-    if ($tarea instanceof Trabajo) {
-      echo "Trabajo";
-    }
+    // if ($tarea instanceof Trabajo) {
+    //   require('views/trabajo.php');
+    // } else {
+    //   require('views/tarea.php');
+    // }
+    $clase = strtolower(get_class($tarea));
+    require('views/'.$clase.'.php');
   endforeach;
 ?>
 </div>

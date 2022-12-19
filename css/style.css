@@ -10,10 +10,19 @@
   box-shadow: 10px 10px 10px grey;
 }
 
+.trabajo {
+  border: 3px solid red;
+  border-radius: 15px;
+}
+
 .activa {
   background-color: aquamarine;
 }
 
 .finalizada {
   background-color: indianred;
+}
+
+.oculto {
+  display: none;
 }
