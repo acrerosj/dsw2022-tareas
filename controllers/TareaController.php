@@ -1,17 +1,12 @@
 <?php
 require_once('models/Tarea.php');
+require_once('models/Trabajo.php');
 
 class TareaController {
   public $tareas;
 
   public function __construct()
   {
-    // $this->tareas = [
-    //   new Tarea('Corregir examen PHP'),
-    //   new Tarea('Corregir examen Javascript'),
-    //   new Tarea('Poner notas DSW'),
-    //   new Tarea('Poner notas DEW')
-    // ];
     $this->tareas = isset($_SESSION['tareas']) ? $_SESSION['tareas'] : [];
   }
 

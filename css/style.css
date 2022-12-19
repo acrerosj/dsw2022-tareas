@@ -1,0 +1,19 @@
+#lista {
+  display: flex;  
+}
+
+.tarea {
+  width: 300px;
+  margin: 10px;
+  padding: 3px 10px;
+  border: 1px solid black;
+  box-shadow: 10px 10px 10px grey;
+}
+
+.activa {
+  background-color: aquamarine;
+}
+
+.finalizada {
+  background-color: indianred;
+}

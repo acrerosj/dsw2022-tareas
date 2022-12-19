@@ -1,36 +1,18 @@
-<style>
-    th{
-        width: 15rem;
-        text-align: left;
-        border-bottom: 1px solid black;
-    }
-    td{
-        width: 15rem;
-    }
-</style>
-
+<?php require('views/header.php'); ?>
 <h1>Listado de Tareas</h1>
 <p>
   <button>
     <a href="/index.php/tarea">Crear nueva tarea</a>
   </button>
+  <div id="lista">
 </p>
-<table>
-    <tr>
-        <th>Título</th>
-        <th>Acciones</th>
-    </tr>
 <?php
   foreach($tareas as $num => $tarea):
-?>
-    <tr>
-        <td><?php echo $tarea ?></td>
-        <td>
-          <a href="/index.php/deletetarea/<?=$num?>">Eliminiar</a>
-          <a href="/index.php/finalizartarea/<?=$num?>">Finalizar</a>
-        </td>
-    </tr>
-<?php
+    require('views/tarea.php');
+    if ($tarea instanceof Trabajo) {
+      echo "Trabajo";
+    }
   endforeach;
 ?>
-</table>
+</div>
+<?php require('views/footer.php'); ?>
